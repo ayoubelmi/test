@@ -1,15 +1,21 @@
 pipeline {
-    agent any
+    agent none
     stages {
-        stage('Example') {
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
             steps {
-                echo 'Hello World'
+                sh 'mvn --version'
             }
         }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
+        stage('Front-end') {
+            agent {
+                docker { image 'node:7-alpine' }
+            }
+            steps {
+                sh 'node --version'
+            }
         }
     }
 }

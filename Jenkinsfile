@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'node:7-alpine' 
+               label 'docker-agent'
+               }
     }
     stages {
         stage('Test') {

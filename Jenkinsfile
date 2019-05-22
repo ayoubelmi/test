@@ -1,4 +1,21 @@
 pipeline {
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*pipeline {
     agent {
         docker { image 'node:7-alpine' 
                label 'docker-agent'
@@ -12,7 +29,7 @@ pipeline {
         }
     }
 }
-/*pipeline {
+pipeline {
     agent none
     stages {
         stage('Back-end') {

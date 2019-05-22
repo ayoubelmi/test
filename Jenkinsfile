@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'svn --version'
+                sh 'docker --version'
             }
         }
     }

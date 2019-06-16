@@ -30,6 +30,12 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('other stage') {
+            steps {
+                sh 'pwd'
+            }
+        }
+        
     }
 }
 /*

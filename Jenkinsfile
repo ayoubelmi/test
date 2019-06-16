@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent { dockerfile { 
                   filename 'Dockerfile'
                   label 'docker-agent' } 
@@ -18,7 +18,7 @@ pipeline {
 
 
 
-/*pipeline {
+pipeline {
     agent {
         docker { image 'node:7-alpine' 
                label 'docker-agent'
@@ -31,7 +31,7 @@ pipeline {
             }
         }
     }
-}
+}*/
 pipeline {
     agent none
     stages {
@@ -53,4 +53,4 @@ pipeline {
         }
     }
 }
-*/
+
